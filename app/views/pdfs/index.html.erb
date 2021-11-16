@@ -1,0 +1,25 @@
+<!doctype html>
+
+<h1>Listado de pdfs</h1>
+<br>
+<br>
+<table class="table-primary">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">IP</th>
+      <th scope="col">Sistema Operativo</th>
+      <th scope="col">Versión</th>
+      <th scope="col">Contraseña</th>
+    </tr>
+  </thead>
+  <tbody class="rounded-pill">
+    <% @pdfs.each do |pdf| %>
+      <tr>
+        <td><%= pdf.ip %> </td>
+        <td><%= pdf.sistema_operativo %> </td>
+        <td><%= pdf.version%></td>
+        <td><%= pdf.contraseña %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
