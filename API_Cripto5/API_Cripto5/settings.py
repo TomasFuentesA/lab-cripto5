@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-zj1u#&*l=u-w1-c4qbn*qbc)8fpbbzpc5fsw2+qwf36)mtxto2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '172.26.16.1',
+]
 
 
 # Application definition
@@ -37,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'API_Cripto5_api.apps.ApiCripto5ApiConfig'
+    'API_Cripto5_api.apps.ApiCripto5ApiConfig',
+    'django_user_agents'
 ]
 
 MIDDLEWARE = [
@@ -48,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_user_agents.middleware.UserAgentMiddleware',
 ]
 
 ROOT_URLCONF = 'API_Cripto5.urls'
@@ -113,6 +117,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+USER_AGENTS_CACHE = 'default'
 
 
 # Static files (CSS, JavaScript, Images)
