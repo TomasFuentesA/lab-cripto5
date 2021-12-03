@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope = "col">IP</th>
+                <th scope = "col">SO</th>
+                <th scope = "col">Version</th>
+                <th scope = "col">Contraseña</th>
+            </tr>
+        </thead>
+        {% for d in datos %}
+        <tr>
+            <th scope="row"> {{d.ip}} </th>
+            <th scope="row"> {{d.so}} </th>
+            <th scope="row"> {{d.version}} </th>
+            <th scope="row"> {{d.contrasenia}} </th>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
